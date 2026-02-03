@@ -1,43 +1,26 @@
-/* -----------------------------------------
-  Have focus outline only for keyboard users 
- ---------------------------------------- */
+const reveals = document.querySelectorAll('.reveal');
 
-const handleFirstTab = (e) => {
-  if(e.key === 'Tab') {
-    document.body.classList.add('user-is-tabbing')
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
 
-    window.removeEventListener('keydown', handleFirstTab)
-    window.addEventListener('mousedown', handleMouseDownOnce)
-  }
+  reveals.forEach(el => observer.observe(el));
 
+  // Fallback: after 500ms force-show anything already on screen
+  setTimeout(() => {
+    reveals.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('visible');
+      }
+    });
+  }, 500);
+} else {
+  // No IntersectionObserver support — show everything immediately
+  reveals.forEach(el => el.classList.add('visible'));
 }
-
-const handleMouseDownOnce = () => {
-  document.body.classList.remove('user-is-tabbing')
-
-  window.removeEventListener('mousedown', handleMouseDownOnce)
-  window.addEventListener('keydown', handleFirstTab)
-}
-
-window.addEventListener('keydown', handleFirstTab)
-
-const backToTopButton = document.querySelector(".back-to-top");
-let isBackToTopRendered = false;
-
-let alterStyles = (isBackToTopRendered) => {
-  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-  backToTopButton.style.transform = isBackToTopRendered
-    ? "scale(1)"
-    : "scale(0)";
-};
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
-  } else {
-    isBackToTopRendered = false;
-    alterStyles(isBackToTopRendered);
-  }
-});
