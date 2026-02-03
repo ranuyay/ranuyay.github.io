@@ -611,3 +611,25 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+/* --- Mobile fix: project layout and spacing --- */
+@media (max-width: 768px) {
+  .work__box {
+    flex-direction: column;
+  }
+
+  .work__box:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+
+  .work__image-box {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .work__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
