@@ -4,270 +4,261 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
   <title>Rania A. Hamid | Data Analyst & Data Scientist</title>
-
-  <meta name="description"
-    content="Data analyst and aspiring data scientist interested in applied machine learning, ethical AI, and representation in data." />
-  <meta name="keywords"
-    content="Rania Hamid, Data Analyst, Data Scientist, Python, Machine Learning, NLP, Computer Vision, Ethical AI" />
-
-  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-  <!-- ***** Header / Hero ***** -->
+  <!-- ── Nav ────────────────────────────────── -->
+  <nav>
+    <a href="#top" class="nav-logo">R<span>.</span>A<span>.</span>H<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#interests" class="nav__link">Interests</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>Rania A. Hamid</span>
-        </h1>
-
-        <p>
-          Data Analyst and aspiring Data Scientist interested in applied machine learning,
-          ethical AI, and how data shapes real-world decisions.
+  <!-- ── Hero ───────────────────────────────── -->
+  <section class="hero" id="top">
+    <div class="hero-stripe"></div>
+    <div class="hero-inner">
+      <div class="hero-text reveal">
+        <p class="eyebrow"><span class="dash"></span> Data Analyst & Scientist</p>
+        <h1>Rania A.<br><span class="highlight">Hamid</span></h1>
+        <p class="tagline">
+          I work in data analytics and machine learning, with a focus on ethical AI and making sure the systems we build
+          actually do good.
         </p>
-
-        <a href="#work" class="btn btn--pink">View My Work</a>
-      </div>
-    </div>
-  </header>
-
-  <main role="main">
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-
-        <div class="about__content">
-          <div class="about__text">
-            <p>
-              I’m a data analyst with experience working on applied analytics problems in public-sector
-              and mission-driven contexts. My interests sit at the intersection of technical rigor,
-              ethical considerations, and practical impact—especially in areas where data systems
-              influence real people.
-              <br><br>
-              I’m currently pursuing an M.S. in Data Analytics at the University of Maryland Global Campus,
-              with coursework in machine learning, predictive analytics, data management, and ethical AI.
-              I’m particularly interested in how dataset design, representation, and modeling choices
-              affect downstream outcomes.
-            </p>
-
-            <a href="./documents/Rania_Hamid_Resume.pdf" class="btn" target="_blank">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <img class="about__photo" src="./images/rania.jpg" alt="Rania Hamid" />
-          </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="./documents/Rania_Hamid_Resume.pdf" class="btn-ghost">Resume</a>
         </div>
       </div>
-    </section>
 
-    <!-- ***** Projects ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>Projects</h2>
-
-        <div class="work__boxes">
-
-          <!-- Project 1 -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Neural Network Sentiment Analysis</h3>
-              <p>
-                Designed and evaluated feedforward neural network models in TensorFlow to classify sentiment
-                in text data using the GLUE / SST-2 dataset, assessing performance with confusion matrices
-                and standard machine learning metrics.
-              </p>
-              <ul class="work__list">
-                <li>Python</li>
-                <li>TensorFlow</li>
-                <li>Machine Learning</li>
-                <li>NLP</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/ranuyay/sentiment-ffnn-sst2" target="_blank" class="link__text">
-                  View Code <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/ranuyay/sentiment-ffnn-sst2" target="_blank" title="View Source Code">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-
-            <div class="work__image-box">
-              <img src="./images/sentiment.png" class="work__image" alt="Sentiment Analysis Project" />
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Spam Classification Model</h3>
-              <p>
-                Built and evaluated supervised machine learning models for spam email classification,
-                focusing on feature engineering, model selection, and performance evaluation.
-              </p>
-              <ul class="work__list">
-                <li>Python</li>
-                <li>Scikit-learn</li>
-                <li>Classification</li>
-                <li>Data Analysis</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/ranuyay/spam-email-classification" target="_blank" class="link__text">
-                  View Code <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/ranuyay/spam-email-classification" target="_blank" title="View Source Code">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-
-            <div class="work__image-box">
-              <img src="./images/spam.png" class="work__image" alt="Spam Classification Project" />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** Interests & Exploratory Projects ***** -->
-
-    <section class="work" id="interests">
-      <div class="row">
-        <h2>Interests & Exploratory Projects</h2>
-
-        <div class="work__box">
-          <div class="work__text">
-            <h3>Representation in Computer Vision</h3>
-            <p>
-              Outside of formal projects, I’m interested in how bias and representation appear in computer vision
-              systems.
-              This interest comes partly from cosplay, where I’ve noticed a disconnect between the diversity of real
-              people
-              and the way subjects are represented in many commonly used image datasets for machine learning.
-            </p>
-            <p>
-              I’m exploring the idea of building an open, responsibly sourced image dataset focused on Black cosplayers.
-              The project would examine how dataset composition and labeling choices affect model performance and bias,
-              while also being intentional about consent, documentation, and ethical data use.
-            </p>
-            <ul class="work__list">
-              <li>Computer Vision</li>
-              <li>Dataset Design</li>
-              <li>Ethical AI</li>
-              <li>Bias & Representation</li>
-            </ul>
+      <div class="hero-image reveal" data-delay="2">
+        <div class="hero-image-wrap">
+          <div class="frame"></div>
+          <img src="./images/rania.jpg" alt="Rania Hamid"
+            onerror="this.style.display='none'; document.querySelector('.placeholder-avatar').style.display='flex';">
+          <div class="placeholder-avatar" style="display:none; position:absolute; inset:0;">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="35" r="18" stroke="currentColor" stroke-width="3" fill="none" />
+              <path d="M15 90c0-19.3 15.7-35 35-35s35 15.7 35 35" stroke="currentColor" stroke-width="3" fill="none"
+                stroke-linecap="round" />
+            </svg>
           </div>
         </div>
-
-        <div class="work__box">
-          <div class="work__text">
-            <h3>Bike to School Day – Data Planning</h3>
-            <p>
-              An in-progress applied data project supporting the planning of a school Bike to School Day.
-              The project focuses on participation analysis, safe route planning, and privacy-conscious
-              data collection in coordination with a school PTA.
-            </p>
-            <ul class="work__list">
-              <li>Data Collection Design</li>
-              <li>Privacy & Ethics</li>
-              <li>Route Planning</li>
-              <li>Applied Analytics</li>
-            </ul>
-
-            <div class="work__links">
-              <a href="https://github.com/ranuyay/bike-to-school-data-planning" target="_blank" class="link__text">
-                View Project <span>&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-
-  </main>
-
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          If my work or interests resonate with you, feel free to reach out.
-        </p>
-        <a id="email-link" class="btn">Contact me</a>
       </div>
     </div>
   </section>
 
-  <!-- ***** Footer ***** -->
+  <!-- ── About ──────────────────────────────── -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="num">01</span>
+        <span class="text">About</span>
+        <span class="line"></span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a data analyst who's worked on projects in public-sector and mission-driven spaces. I care a lot about
+            the <strong>ethics side</strong> of data work — like, what happens when the people making the models aren't
+            asking the right questions about who gets affected.
+          </p>
+          <p>
+            I have a background in Linguistics from the University of Maryland College Park. I am proficient in
+            Japanese,
+            fluent in Spanglish, and have some elementary proficiency in Korean, Arabic, Amharic and Tigrinye. I am a
+            diplomat's
+            daughter and have a keen interest in global affairs in multicultural collaboration.
+          </p>
+          <p>
+            I'm a mom of the cutest kid in the world and that's a hill I'll die on. I care about the world he will
+            inherit, so I plant
+            trees in my spare time.
+          </p>
+          <p>
+            Right now I'm finishing up an <strong>M.S. in Data Analytics</strong> at the University of Maryland Global
+            Campus. A lot of my coursework has been in artificial intelligence - machine learning algorithms and data
+            management - but
+            what keeps me up at night is how dataset design and labeling choices quietly shape what a model can and
+            can't do.
+          </p>
+        </div>
+        <div class="about-highlights reveal" data-delay="1">
+          <div class="highlight-card">
+            <h4>🎓 Education</h4>
+            <p>M.S. Data Analytics — University of Maryland Global Campus</p>
+          </div>
+          <div class="highlight-card">
+            <h4>🔬 Focus Areas</h4>
+            <p>Machine learning, predictive analytics, ethical AI, dataset design</p>
+          </div>
+          <div class="highlight-card">
+            <h4>📄 Resume</h4>
+            <p><a href="./documents/Rania_Hamid_Resume.pdf">Download PDF →</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://github.com/ranuyay" title="GitHub">
-            <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/ranhamid" title="LinkedIn">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
-          </a>
-        </li>
-      </ul>
+  <!-- ── Projects ────────────────────────────── -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="num">02</span>
+        <span class="text">Projects</span>
+        <span class="line"></span>
+      </div>
+      <div class="projects-grid">
 
-      <p>&copy; 2026 Rania A. Hamid</p>
+        <div class="project-card reveal">
+          <div class="project-card-img"><span class="icon">🧠</span></div>
+          <div class="project-card-body">
+            <h3>Neural Network Sentiment Analysis</h3>
+            <p>Built feedforward neural networks in TensorFlow to do text sentiment classification on the SST-2 dataset.
+              Tested everything with confusion matrices and examined misclassifications using a variety of metrics.
+              wrong. Added human-in-the-loop element for sample business use-case. </p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag gold-tag">ML</span>
+              <span class="tag gold-tag">NLP</span>
+            </div>
+            <a href="https://github.com/ranuyay/sentiment-ffnn-sst2" class="card-link" target="_blank">
+              View Code
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-delay="1">
+          <div class="project-card-img"><span class="icon">📧</span></div>
+          <div class="project-card-body">
+            <h3>Spam Classification Model</h3>
+            <p>Trained and compared a few different supervised models to classify spam emails. Spent most of the time on
+              feature engineering — figuring out which signals actually mattered for telling spam apart.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag gold-tag">Classification</span>
+              <span class="tag gold-tag">Data Analysis</span>
+            </div>
+            <a href="https://github.com/ranuyay/spam-email-classification" class="card-link" target="_blank">
+              View Code
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Interests ──────────────────────────── -->
+  <section id="interests">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="num">03</span>
+        <span class="text">Interests & Exploratory Work</span>
+        <span class="line"></span>
+      </div>
+      <div class="interests-layout">
+        <div class="interests-left">
+          <div class="interest-block reveal">
+            <h3>Representation in Computer Vision</h3>
+            <p>Something I think about a lot: most image datasets used to train CV models are pretty skewed in terms of
+              who's actually in them. I got interested in this partly through cosplay — there's a huge disconnect
+              between how diverse cosplayers actually are and what is available in open source datasets. I'm working on
+              the idea of
+              a dataset specifically for Black cosplayers, built with real attention to consent and documentation.</p>
+            <div class="tag-row">
+              <span class="tag">Computer Vision</span>
+              <span class="tag gold-tag">Dataset Design</span>
+              <span class="tag">Ethical AI</span>
+              <span class="tag gold-tag">Bias & Rep.</span>
+            </div>
+          </div>
+          <div class="interest-block reveal">
+            <h3>Bike to School Day — Data Planning</h3>
+            <p>Helping a school PTA plan a Bike to School Day — the data side, anyway. Figuring out participation, safe
+              routes, and how to collect info from families without being creepy about it.</p>
+            <div class="tag-row">
+              <span class="tag">Data Collection</span>
+              <span class="tag gold-tag">Privacy & Ethics</span>
+              <span class="tag">Route Planning</span>
+            </div>
+            <a href="https://github.com/ranuyay/bike-to-school-data-planning" class="card-link"
+              style="margin-top:.7rem;" target="_blank">
+              View Project
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="interests-right">
+          <div class="interests-quote reveal">
+            <div class="quote-mark">"</div>
+            <blockquote>
+              What goes into a dataset isn't neutral. It's a choice — and it changes what the model can see.
+            </blockquote>
+            <p class="quote-attr">— the thread connecting these projects</p>
+            <div class="tag-row">
+              <span class="tag">Ethical AI</span>
+              <span class="tag gold-tag">Dataset Design</span>
+              <span class="tag">Bias Research</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ─────────────────────────────── -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="num">04</span>
+        <span class="text">Contact</span>
+      </div>
+      <div class="contact-inner reveal">
+        <h2>Let's <span>Talk</span></h2>
+        <p>Working on something interesting? Just want to say hi? Either way, I'm around.</p>
+        <div class="contact-links">
+          <a href="https://github.com/ranuyay" class="btn-ghost" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/ranhamid" class="btn-ghost" target="_blank">LinkedIn</a>
+          <a href="mailto:rania.hamid@umail.umgc.edu" class="btn-primary">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────── -->
+  <footer>
+    <span class="copy">© 2026 Rania A. Hamid</span>
+    <div class="social">
+      <a href="https://github.com/ranuyay" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/ranhamid" target="_blank">LinkedIn</a>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
-  </a>
-
-  <!-- Email obfuscation -->
-  <script>
-    (function () {
-      const user = "ran.hamid";
-      const domain = "gmail.com";
-      const link = document.getElementById("email-link");
-
-      if (link) {
-        link.addEventListener("click", function () {
-          window.location.href = "mailto:" + user + "@" + domain;
-        });
-      }
-    })();
-  </script>
-
-  <script src="./index.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
