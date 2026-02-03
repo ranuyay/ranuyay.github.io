@@ -24,3 +24,14 @@ if ('IntersectionObserver' in window) {
   // No IntersectionObserver support — show everything immediately
   reveals.forEach(el => el.classList.add('visible'));
 }
+(function () {
+  const user = "rania.hamid";
+  const domain = "umail.umgc.edu";
+
+  const email = `${user}@${domain}`;
+  const link = document.getElementById("email-link");
+
+  if (link) {
+    link.setAttribute("href", `mailto:${email}`);
+  }
+})();
