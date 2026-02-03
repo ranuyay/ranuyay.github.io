@@ -179,7 +179,7 @@
           I’m interested in data analytics, data science, and applied research opportunities—particularly in public-sector
           or mission-driven environments. The best way to reach me is via email.
         </p>
-        <a href="mailto:ran.hamid@gmail.com" class="btn">ran.hamid@gmail.com</a>
+        <a id="email-link" class="btn">Email Me</a>
       </div>
     </div>
   </section>
@@ -210,6 +210,19 @@
   <a href="#top" class="back-to-top" title="Back to Top">
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
   </a>
+<script>
+  (function () {
+    const user = "ran.hamid";
+    const domain = "gmail.com";
+    const email = user + "@" + domain;
+
+    const link = document.getElementById("email-link");
+    if (link) {
+      link.href = "mailto:" + email;
+      link.textContent = email;
+    }
+  })();
+</script>
 
   <script src="./index.js"></script>
 </body>
