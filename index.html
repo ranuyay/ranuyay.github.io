@@ -210,19 +210,21 @@
   <a href="#top" class="back-to-top" title="Back to Top">
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
   </a>
-<script>
+
+  <script>
   (function () {
     const user = "ran.hamid";
     const domain = "gmail.com";
-    const email = user + "@" + domain;
 
     const link = document.getElementById("email-link");
     if (link) {
-      link.href = "mailto:" + email;
-      link.textContent = email;
+      link.addEventListener("click", function () {
+        window.location.href = "mailto:" + user + "@" + domain;
+      });
     }
   })();
 </script>
+
 
   <script src="./index.js"></script>
 </body>
